@@ -38,7 +38,7 @@
 				&sys_off
 				&kp ESCAPE       &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3   &kp NUMBER_4       &kp NUMBER_5 &kp F5           &kp F6            &kp NUMBER_6  &kp NUMBER_7        &kp NUMBER_8 &kp NUMBER_9  &kp NUMBER_0  &kp BACKSPACE
 				&kp TAB          &kp Q        &kp W        &kp E          &kp R              &kp T        &none            &none             &kp Y         &kp U               &kp I        &kp O         &kp P         &kp BACKSLASH
-				&kp LEFT_CONTROL &kp A        &kp S        &kp D          &hrl LAYER_LEFTFN F &kp G                                         &kp H         &hrl LAYER_RIGHTFN J &kp K        &kp L         &kp SEMICOLON &kp RETURN
+				&kp LEFT_CONTROL &kp A        &kp S        &kp D          &lt LAYER_LEFTFN F &kp G                                           &kp H         &lt LAYER_RIGHTFN J &kp K        &kp L         &kp SEMICOLON &kp RETURN
 				&kp LEFT_SHIFT   &kp Z        &kp X        &kp C          &kp V              &kp B        &mo LAYER_LEFTFN &mo LAYER_RIGHTFN &kp N         &kp M               &kp COMMA    &kp PERIOD    &kp SLASH     &kp RIGHT_SHIFT
 				&kp LEFT_CONTROL &none        &kp LEFT_ALT &kp LEFT_ARROW &kp RIGHT_ARROW                                                                  &kp DOWN_ARROW      &kp UP_ARROW &kp RIGHT_ALT &none         &none
 				                                                                             &none        &kp LEFT_GUI     &to LAYER_GAMING  &none
