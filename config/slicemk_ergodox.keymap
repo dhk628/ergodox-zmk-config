@@ -1,7 +1,9 @@
 #define LAYER_MAIN 0
-#define LAYER_LEFTFN 1
-#define LAYER_RIGHTFN 2
+#define LAYER_LHFN 1
+#define LAYER_RHFN 2
 #define LAYER_GAMING 3
+#define LAYER_LFN 4
+#define LAYER_RFN 5
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -36,11 +38,11 @@
 		layer_0 {
 			bindings = <
 				&sys_off
-				&kp ESCAPE       &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3   &kp NUMBER_4       &kp NUMBER_5 &kp F5           &kp F6            &kp NUMBER_6  &kp NUMBER_7        &kp NUMBER_8 &kp NUMBER_9  &kp NUMBER_0  &kp BACKSPACE
-				&kp TAB          &kp Q        &kp W        &kp E          &kp R              &kp T        &none            &none             &kp Y         &kp U               &kp I        &kp O         &kp P         &kp BACKSLASH
-				&kp LEFT_CONTROL &kp A        &kp S        &kp D          &lt LAYER_LEFTFN F &kp G                                           &kp H         &lt LAYER_RIGHTFN J &kp K        &kp L         &kp SEMICOLON &kp RETURN
-				&kp LEFT_SHIFT   &kp Z        &kp X        &kp C          &kp V              &kp B        &mo LAYER_LEFTFN &mo LAYER_RIGHTFN &kp N         &kp M               &kp COMMA    &kp PERIOD    &kp SLASH     &kp RIGHT_SHIFT
-				&kp LEFT_CONTROL &none        &kp LEFT_ALT &kp LEFT_ARROW &kp RIGHT_ARROW                                                                  &kp DOWN_ARROW      &kp UP_ARROW &kp RIGHT_ALT &none         &none
+				&kp ESCAPE       &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3   &kp NUMBER_4       &kp NUMBER_5 &kp F5           &kp F6            &kp NUMBER_6  &kp NUMBER_7      &kp NUMBER_8   &kp NUMBER_9  &kp NUMBER_0  &kp BACKSPACE
+				&kp TAB          &kp Q        &kp W        &kp E          &kp R              &kp T        &kp HOME         &none             &kp Y         &kp U             &kp I          &kp O         &kp P         &kp BACKSLASH
+				&kp LEFT_CONTROL &kp A        &kp S        &kp D          &lt LAYER_LHFN F   &kp G                                           &kp H         &lt LAYER_RHFN J  &kp K          &kp L         &kp SEMICOLON &kp RETURN
+				&kp LEFT_SHIFT   &kp Z        &kp X        &kp C          &kp V              &kp B        &kp END          &kp DEL           &kp N         &kp M             &kp COMMA      &kp PERIOD    &kp SLASH     &kp RIGHT_SHIFT
+				&kp LEFT_CONTROL &none        &none        &kp LEFT_ALT   &mo LAYER_LFN                                                                    &mo LAYER_RFN     &kp RIGHT_ALT  &none         &none         &none
 				                                                                             &none        &kp LEFT_GUI     &to LAYER_GAMING  &none
 				                                                          &kp SPACE          &kp TAB      &none            &none             &kp BACKSPACE &kp SPACE
 				                                                                                          &kp LEFT_SHIFT   &kp RIGHT_SHIFT
@@ -49,11 +51,11 @@
 		layer_1 {
 			bindings = <
 				&sys_off
-				&none &kp F1 &kp F2 &kp F3        &kp F4 &kp F5 &kp F11 &kp F12 &kp F6 &kp F7               &kp F8                &kp F9         &kp F10      &none
-				&none &none  &none  &none         &none  &none  &none   &none   &none  &kp LEFT_BRACE       &kp RIGHT_BRACE       &none          &none        &none
-				&none &none  &none  &kp BACKSLASH &none  &none                  &none  &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE &none        &none
-				&none &none  &none  &none         &none  &none  &none   &none   &none  &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &none          &kp QUESTION &none
-				&none &none  &none  &none         &none                                &none                &none                 &none          &none        &none
+				&none    &kp F1 &kp F2 &kp F3        &kp F4 &kp F5 &kp F11 &kp F12 &kp F6 &kp F7               &kp F8                &kp F9         &kp F10      &none
+				&none    &none  &none  &none         &none  &none  &none   &none   &none  &kp LEFT_BRACE       &kp RIGHT_BRACE       &none          &none        &none
+				&kp CAPS &none  &none  &kp BACKSLASH &none  &none                  &none  &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE &none        &none
+				&none    &none  &none  &none         &none  &none  &none   &none   &none  &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &none          &kp QUESTION &none
+				&none    &none  &none  &none         &none                                &none                &none                 &none          &none        &none
 				                                         &none  &none   &none   &none
 				                                  &none  &none  &none   &none   &none  &none
 				                                                &none   &none
@@ -83,6 +85,32 @@
 				                                                                          &none        &kp LEFT_GUI     &to LAYER_MAIN    &none
 				                                                          &kp SPACE       &kp TAB      &none            &none             &kp BACKSPACE &kp SPACE
 				                                                                                       &kp LEFT_SHIFT   &kp RIGHT_SHIFT
+			>;
+		};
+		layer_4 {
+			bindings = <
+				&sys_off
+				&none    &kp F1    &kp F2                 &kp F3         &kp F4                  &kp F5  &kp F11 &kp F12 &kp F6       &kp F7       &kp F8       &kp F9       &kp F10   &none
+				&none    &none     &kp LC(LS(TAB))        &kp UP_ARROW   &kp LC(TAB)             &none   &none   &none   &none        &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none     &none
+				&kp CAPS &kp HOME  &kp LEFT_ARROW         &kp DOWN_ARROW &kp RIGHT_ARROW         &kp END                 &kp PLUS     &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp MINUS &none
+				&none    &none     &kp LS(LG(LEFT_ARROW)) &none          &kp LS(LG(RIGHT_ARROW)) &none   &none   &none   &kp ASTERISK &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp SLASH &none
+				&none    &none     &none                  &none          &none                                                        &kp NUMBER_0 &kp PERIOD   &none        &none     &none
+				                                                                              &none   &none   &none  &none
+				                                                      &none                   &none   &none   &none  &none   &kp RETURN
+				                                                                                      &none   &none
+			>;
+		};
+		layer_5 {
+			bindings = <
+				&sys_off
+				&none &kp F1          &kp F2      &kp F3   &kp F4       &kp F5    &kp F11 &kp F12 &kp F6 &kp F7     &kp F8           &kp F9            &kp F10 &none
+				&none &none           &none       &none    &none        &none     &none   &none   &none  &none      &none            &none             &none   &none
+				&none &kp AMPERSAND   &kp DOLLAR  &kp PLUS &kp MINUS    &kp CARET                 &none  &none      &kp SINGLE_QUOTE &kp DOUBLE_QUOTES &none   &none
+				&none &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp ASTERISK &kp SLASH &none   &none   &none  &none      &none            &none             &none   &none
+				&none &none           &none       &none    &none                                         &none      &none            &none             &none   &none
+				                                                        &none     &none   &none   &none
+				                                           &kp EQUAL    &none     &none   &none   &none  &kp RETURN
+				                                                                  &none   &none
 			>;
 		};
 	};
