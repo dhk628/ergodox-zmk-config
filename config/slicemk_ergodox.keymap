@@ -18,6 +18,10 @@
 	retro-tap;
 };
 
+&mt{
+	retro-tap;
+};
+
 / {
 	behaviors {
 		hrl: home_row_layer {
