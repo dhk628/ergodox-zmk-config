@@ -1,7 +1,7 @@
 #define LAYER_MAIN 0
-#define LAYER_LHFN 1
-#define LAYER_RHFN 2
-#define LAYER_GAMING 3
+#define LAYER_GAMING 1
+#define LAYER_LHFN 2
+#define LAYER_RHFN 3
 #define LAYER_LFN 4
 #define LAYER_RFN 5
 
@@ -13,7 +13,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &lt {
-	tapping-term-ms = <100>;
+	tapping-term-ms = <150>;
 	require-prior-idle-ms = <125>;
 	retro-tap;
 };
@@ -24,14 +24,13 @@
 
 / {
 	behaviors {
-		hrl: home_row_layer {
+		hrm: home_row_mod {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
 			flavor = "balanced";
-			tapping-term-ms = <100>;
-			require-prior-idle-ms = <125>;
+			tapping-term-ms = <200>;
 			retro-tap;
-			bindings = <&mo>, <&kp>;
+			bindings = <&kp>, <&kp>;
 		};
 	};
 };
@@ -44,7 +43,7 @@
 				&sys_off
 				&kp ESCAPE       &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3   &kp NUMBER_4       &kp NUMBER_5 &kp F5           &kp F6            &kp NUMBER_6  &kp NUMBER_7      &kp NUMBER_8   &kp NUMBER_9  &kp NUMBER_0  &kp BACKSPACE
 				&kp TAB          &kp Q        &kp W        &kp E          &kp R              &kp T        &kp HOME         &none             &kp Y         &kp U             &kp I          &kp O         &kp P         &kp BACKSLASH
-				&kp LEFT_CONTROL &kp A        &mt LCTRL S  &mt LSHIFT D   &lt LAYER_LHFN F   &kp G                                           &kp H         &lt LAYER_RHFN J  &mt RSHIFT K   &mt RCTRL L   &kp SEMICOLON &kp RETURN
+				&kp LEFT_CONTROL &kp A        &hrm LCTRL S &hrm LSHIFT D  &lt LAYER_LHFN F   &kp G                                           &kp H         &lt LAYER_RHFN J  &hrm RSHIFT K  &hrm RCTRL L  &kp SEMICOLON &kp RETURN
 				&kp LEFT_SHIFT   &kp Z        &kp X        &kp C          &kp V              &kp B        &kp END          &kp DEL           &kp N         &kp M             &kp COMMA      &kp PERIOD    &kp SLASH     &kp RIGHT_SHIFT
 				&kp LEFT_CONTROL &none        &none        &kp LEFT_ALT   &mo LAYER_LFN                                                                    &mo LAYER_RFN     &kp RIGHT_ALT  &none         &none         &none
 				                                                                             &none        &kp LEFT_GUI     &to LAYER_GAMING  &none
@@ -55,17 +54,30 @@
 		layer_1 {
 			bindings = <
 				&sys_off
-				&none    &kp F1 &kp F2 &kp F3        &kp F4 &kp F5 &kp F11 &kp F12 &kp F6 &kp F7               &kp F8                &kp F9         &kp F10      &none
-				&none    &none  &none  &none         &none  &none  &none   &none   &none  &kp LEFT_BRACE       &kp RIGHT_BRACE       &none          &none        &none
-				&kp CAPS &none  &none  &kp BACKSLASH &none  &none                  &none  &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE &none        &none
-				&none    &none  &none  &none         &none  &none  &none   &none   &none  &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &none          &kp QUESTION &none
-				&none    &none  &none  &none         &none                                &none                &none                 &none          &none        &none
+				&trans &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3  &kp NUMBER_4 &kp NUMBER_5 &trans           &trans         &kp NUMBER_6  &kp NUMBER_7      &kp NUMBER_8   &kp NUMBER_9  &kp NUMBER_0  &kp BACKSPACE
+				&trans &kp Q        &kp W        &kp E         &kp R        &kp T        &trans           &trans         &kp Y         &kp U             &kp I          &kp O         &kp P         &trans
+				&trans &kp A        &kp S        &kp D         &kp F        &kp G                                        &kp H         &kp J             &kp K          &kp L         &kp SEMICOLON &trans
+				&trans &kp Z        &kp X        &kp C         &kp V        &kp B        &trans           &trans         &kp N         &kp M             &kp COMMA      &kp PERIOD    &kp SLASH     &trans
+				&trans &trans       &trans       &trans        &trans                                                                  &trans            &trans         &trans        &trans        &trans
+				                                                            &trans       &trans           &to LAYER_MAIN &trans
+				                                               &trans       &trans       &trans           &trans         &trans        &trans
+				                                                                         &trans           &trans
+			>;
+		};
+		layer_2 {
+			bindings = <
+				&sys_off
+				&kp GRAVE &kp F1 &kp F2 &kp F3        &kp F4 &kp F5 &kp F11 &kp F12 &kp F6 &kp F7               &kp F8                &kp F9         &kp F10      &none
+				&none     &none  &none  &none         &none  &none  &none   &none   &none  &kp LEFT_BRACE       &kp RIGHT_BRACE       &none          &none        &none
+				&kp CAPS  &none  &none  &kp BACKSLASH &none  &none                  &none  &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE &none        &none
+				&none     &none  &none  &none         &none  &none  &none   &none   &none  &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &none          &kp QUESTION &none
+				&none     &none  &none  &none         &none                                &none                &none                 &none          &none        &none
 				                                         &none  &none   &none   &none
 				                                  &none  &none  &none   &none   &none  &none
 				                                                &none   &none
 			>;
-		};
-		layer_2 {
+		};		
+		layer_3 {
 			bindings = <
 				&sys_off
 				&none &kp F1          &kp F2      &kp F3   &kp F4       &kp F5    &kp F11 &kp F12 &kp F6 &kp F7     &kp F8           &kp F9            &kp F10 &none
@@ -76,19 +88,6 @@
 				                                                        &none     &none   &none   &none
 				                                           &kp EQUAL    &none     &none   &none   &none  &kp RETURN
 				                                                                  &none   &none
-			>;
-		};
-		layer_3 {
-			bindings = <
-				&sys_off
-				&kp ESCAPE       &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3   &kp NUMBER_4    &kp NUMBER_5 &kp F5           &kp F6            &kp NUMBER_6  &kp NUMBER_7        &kp NUMBER_8 &kp NUMBER_9  &kp NUMBER_0  &kp BACKSPACE
-				&kp TAB          &kp Q        &kp W        &kp E          &kp R           &kp T        &kp DEL            &none             &kp Y         &kp U               &kp I        &kp O         &kp P         &kp BACKSLASH
-				&kp LEFT_CONTROL &kp A        &kp S        &kp D          &kp F           &kp G                                           &kp H         &kp J               &kp K        &kp L         &kp SEMICOLON &kp RETURN
-				&kp LEFT_SHIFT   &kp Z        &kp X        &kp C          &kp V           &kp B        &kp END &kp DEL &kp N         &kp M               &kp COMMA    &kp PERIOD    &kp SLASH     &kp RIGHT_SHIFT
-				&kp LEFT_CONTROL &none        &kp LEFT_ALT &kp LEFT_ARROW &kp RIGHT_ARROW                                                               &kp DOWN_ARROW      &kp UP_ARROW &kp RIGHT_ALT &none         &none
-				                                                                          &none        &kp LEFT_GUI     &to LAYER_MAIN    &none
-				                                                          &kp SPACE       &kp TAB      &none            &none             &kp BACKSPACE &kp SPACE
-				                                                                                       &kp LEFT_SHIFT   &kp RIGHT_SHIFT
 			>;
 		};
 		layer_4 {
