@@ -68,7 +68,7 @@
 				&kp LEFT_SHIFT   &kp Z        &kp X        &kp C          &kp V              &kp B        &kp END          &kp DEL           &kp N         &kp M             &kp COMMA      &kp PERIOD    &kp SLASH     &kp RIGHT_SHIFT
 				&kp LEFT_CONTROL &none        &none        &kp LEFT_ALT   &mo LAYER_LFN                                                                    &mo LAYER_RFN     &kp RIGHT_ALT  &none         &none         &none
 				                                                                             &none        &kp LEFT_GUI     &act_gaming       &none
-				                                                          &kp SPACE          &kp TAB      &none            &none             &kp BACKSPACE &kp SPACE
+				                                                          &kp SPACE          &kp TAB      &kp F19            &kp F20             &kp BACKSPACE &kp SPACE
 				                                                                                          &kp LEFT_SHIFT   &kp RIGHT_SHIFT
 			>;
 		};
