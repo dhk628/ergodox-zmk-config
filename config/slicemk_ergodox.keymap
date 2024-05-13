@@ -29,7 +29,7 @@
             #binding-cells = <0>;
             bindings
                 = <&to LAYER_MAIN>
-                , <&kp F11>
+                , <&kp F19>
                 ;
         };
 		act_gaming: act_gaming {
@@ -37,7 +37,7 @@
             #binding-cells = <0>;
             bindings
                 = <&to LAYER_GAMING>
-                , <&kp F12>
+                , <&kp F20>
                 ;
         };
     };
