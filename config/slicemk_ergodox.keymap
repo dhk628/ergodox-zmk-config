@@ -67,7 +67,7 @@
 				&kp LEFT_CONTROL &kp A        &hrm LCTRL S &hrm LSHIFT D  &lt LAYER_LHFN F   &kp G                                           &kp H         &lt LAYER_RHFN J  &hrm RSHIFT K  &hrm RCTRL L  &kp SEMICOLON &kp RETURN
 				&kp LEFT_SHIFT   &kp Z        &kp X        &kp C          &kp V              &kp B        &kp END          &kp DEL           &kp N         &kp M             &kp COMMA      &kp PERIOD    &kp SLASH     &kp RIGHT_SHIFT
 				&kp LEFT_CONTROL &none        &none        &kp LEFT_ALT   &mo LAYER_LFN                                                                    &mo LAYER_RFN     &kp RIGHT_ALT  &none         &none         &none
-				                                                                             &none        &kp LEFT_GUI     &to LAYER_GAMING  &none
+				                                                                             &none        &kp LEFT_GUI     &act_gaming       &none
 				                                                          &kp SPACE          &kp TAB      &none            &none             &kp BACKSPACE &kp SPACE
 				                                                                                          &kp LEFT_SHIFT   &kp RIGHT_SHIFT
 			>;
@@ -80,7 +80,7 @@
 				&trans &kp A        &kp S        &kp D         &kp F        &kp G                                        &kp H         &kp J             &kp K          &kp L         &kp SEMICOLON &trans
 				&trans &kp Z        &kp X        &kp C         &kp V        &kp B        &trans           &trans         &kp N         &kp M             &kp COMMA      &kp PERIOD    &kp SLASH     &trans
 				&trans &trans       &trans       &trans        &trans                                                                  &trans            &trans         &trans        &trans        &trans
-				                                                            &trans       &trans           &to LAYER_MAIN &trans
+				                                                            &trans       &trans           &act_main      &trans
 				                                               &trans       &trans       &trans           &trans         &trans        &trans
 				                                                                         &trans           &trans
 			>;
