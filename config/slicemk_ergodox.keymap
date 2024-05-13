@@ -23,6 +23,27 @@
 };
 
 / {
+    macros {
+        act_main: act_main {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to LAYER_MAIN>
+                , <&kp F23>
+                ;
+        };
+		act_gaming: act_gaming {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to LAYER_GAMING>
+                , <&kp F24>
+                ;
+        };
+    };
+};
+
+/ {
 	behaviors {
 		hrm: home_row_mod {
 			compatible = "zmk,behavior-hold-tap";
