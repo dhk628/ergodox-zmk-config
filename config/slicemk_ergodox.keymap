@@ -96,7 +96,7 @@
 				&none     &none  &none  &none         &none  &none  &none         &none   &none  &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &none          &kp QUESTION &none
 				&none     &none  &none  &none         &none                                      &none                &none                 &none          &none        &none
 				                                         &none  &none             &none   &none
-				                                  &none  &none  &&tb_bootloader   &none   &none  &none
+				                                  &none  &none  &tb_bootloader    &none   &none  &none
 				                                                &none             &none
 			>;
 		};		
