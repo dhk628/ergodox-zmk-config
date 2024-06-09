@@ -12,6 +12,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <interfaces/hid-trackball.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 
 &lt {
 	tapping-term-ms = <150>;
@@ -67,10 +68,10 @@
 				&kp TAB          &kp Q        &kp W        &kp E          &kp R              &kp T        &kp HOME         &none             &kp Y         &kp U             &kp I          &kp O         &kp P         &kp BACKSLASH
 				&kp LEFT_CONTROL &kp A        &hrm LCTRL S &hrm LSHIFT D  &lt LAYER_LHFN F   &kp G                                           &kp H         &lt LAYER_RHFN J  &hrm RSHIFT K  &hrm RCTRL L  &kp SEMICOLON &kp RETURN
 				&kp LEFT_SHIFT   &kp Z        &kp X        &kp C          &kp V              &kp B        &kp END          &kp DEL           &kp N         &kp M             &kp COMMA      &kp PERIOD    &kp SLASH     &kp RIGHT_SHIFT
-				&kp LEFT_CONTROL &none        &none        &kp LEFT_ALT   &mo LAYER_LFN                                                                    &mo LAYER_RFN     &kp RIGHT_ALT  &none         &none         &none
-				                                                                             &none        &kp LEFT_GUI     &act_gaming       &none
+				&kp LEFT_CONTROL &none        &kp LEFT_GUI &kp LEFT_ALT   &mo LAYER_LFN                                                                    &mo LAYER_RFN     &kp RIGHT_ALT  &none         &none         &none
+				                                                                             &mkp RCLK    &mkp MCLK        &act_gaming       &none
 				                                                          &kp SPACE          &kp TAB      &tb_tg_scroll    &tb_cyc_dpi       &kp BACKSPACE &kp SPACE
-				                                                                                          &kp LEFT_SHIFT   &kp RIGHT_SHIFT
+				                                                                                          &mkp LCLK        &kp RIGHT_SHIFT
 			>;
 		};
 		layer_1 {
@@ -89,14 +90,14 @@
 		layer_2 {
 			bindings = <
 				&sys_off
-				&kp GRAVE &kp F1 &kp F2 &kp F3        &kp F4 &kp F5 &bootloader &none   &kp F6 &kp F7               &kp F8                &kp F9         &kp F10      &none
-				&none     &none  &none  &none         &none  &none  &none       &none   &none  &kp LEFT_BRACE       &kp RIGHT_BRACE       &none          &none        &none
-				&kp CAPS  &none  &none  &kp BACKSLASH &none  &none                      &none  &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE &none        &none
-				&none     &none  &none  &none         &none  &none  &none       &none   &none  &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &none          &kp QUESTION &none
-				&none     &none  &none  &none         &none                                    &none                &none                 &none          &none        &none
-				                                         &none  &none   &none   &none
-				                                  &none  &none  &none   &none   &none  &none
-				                                                &none   &none
+				&kp GRAVE &kp F1 &kp F2 &kp F3        &kp F4 &kp F5 &bootloader   &none   &kp F6 &kp F7               &kp F8                &kp F9         &kp F10      &none
+				&none     &none  &none  &none         &none  &none  &none         &none   &none  &kp LEFT_BRACE       &kp RIGHT_BRACE       &none          &none        &none
+				&kp CAPS  &none  &none  &kp BACKSLASH &none  &none                        &none  &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE &none        &none
+				&none     &none  &none  &none         &none  &none  &none         &none   &none  &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &none          &kp QUESTION &none
+				&none     &none  &none  &none         &none                                      &none                &none                 &none          &none        &none
+				                                         &none  &none             &none   &none
+				                                  &none  &none  &&tb_bootloader   &none   &none  &none
+				                                                &none             &none
 			>;
 		};		
 		layer_3 {
