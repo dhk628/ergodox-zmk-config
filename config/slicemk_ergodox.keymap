@@ -94,10 +94,10 @@
 				&none     &none  &none  &none         &none           &none         &kp PG_UP             &none   &none           &kp LEFT_BRACE       &kp RIGHT_BRACE       &none          &none        &trans
 				&kp CAPS  &none  &none  &kp BACKSLASH &none           &none                                       &none           &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE &none        &trans
 				&none     &none  &none  &none         &none           &none         &kp PG_DN             &none   &none           &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &none          &kp QUESTION &trans
-				&none     &none  &none  &none         &none                                                                       &none                &none                 &none          &none        &trans
+				&kp HOME  &none  &none  &none         &none                                                                       &none                &none                 &none          &none        &trans
 				                                                      &none         &none                 &none   &none
 				                                      &kp LEFT_ARROW  &kp UP_ARROW  &tb_bootloader        &none   &kp DOWN_ARROW  &kp RIGHT_ARROW
-				                                                                    &none                 &none
+				                                                                    &kp END               &none
 			>; \
 		};		
 		layer_3 { //RHFN
