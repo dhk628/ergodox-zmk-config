@@ -42,6 +42,14 @@
                 , <&kp F20>
                 ;
         };
+		alt_tab: alt_tab {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+            bindings
+                = <&kp LEFT_ALT>
+                , <&kp TAB>
+                ;
+		};
     };
 };
 
@@ -64,14 +72,14 @@
 		layer_0 {
 			bindings = <
 				&sys_off
-				&kp ESCAPE       &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3   &kp NUMBER_4       &kp NUMBER_5        &kp F5              &kp F6            &kp NUMBER_6    &kp NUMBER_7      &kp NUMBER_8   &kp NUMBER_9   &kp NUMBER_0   &kp BACKSPACE
-				&kp TAB          &kp Q        &kp W        &kp E          &kp R              &kp T               &kp HOME            &none             &kp Y           &kp U             &kp I          &kp O          &kp P          &kp BACKSLASH
-				&kp LEFT_CONTROL &kp A        &kp S        &hrm LSHIFT D  &lt LAYER_LHFN F   &kp G                                                     &kp H           &lt LAYER_RHFN J  &hrm RSHIFT K  &kp L          &kp SEMICOLON  &kp RETURN
-				&kp LEFT_SHIFT   &kp Z        &kp X        &kp C          &kp V              &kp B               &kp END             &kp DEL           &kp N           &kp M             &kp COMMA      &kp PERIOD     &kp SLASH      &kp RIGHT_SHIFT
-				&kp LEFT_CONTROL &none        &kp LEFT_GUI &kp LEFT_ALT   &mo LAYER_LFN                                                                                &mo LAYER_RFN     &kp RIGHT_ALT  &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW
-				                                                                             &mkp RCLK           &mkp MCLK           &act_gaming       &to LAYER_LFN
-				                                                          &kp SPACE          &kp LEFT_SHIFT      &tb_tg_scroll       &tb_cyc_dpi       &kp RIGHT_SHIFT &kp SPACE
-				                                                                                                 &mkp LCLK           &kp RIGHT_SHIFT
+				&kp ESCAPE       &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3   &kp NUMBER_4       &kp NUMBER_5        &kp F5                 &kp F6            &kp NUMBER_6    &kp NUMBER_7      &kp NUMBER_8   &kp NUMBER_9   &kp NUMBER_0   &kp BACKSPACE
+				&kp TAB          &kp Q        &kp W        &kp E          &kp R              &kp T               &kp HOME               &none             &kp Y           &kp U             &kp I          &kp O          &kp P          &kp BACKSLASH
+				&kp LEFT_CONTROL &kp A        &kp S        &hrm LSHIFT D  &lt LAYER_LHFN F   &kp G                                                        &kp H           &lt LAYER_RHFN J  &hrm RSHIFT K  &kp L          &kp SEMICOLON  &kp RETURN
+				&kp LEFT_SHIFT   &kp Z        &kp X        &kp C          &kp V              &kp B               &kp END                &kp DEL           &kp N           &kp M             &kp COMMA      &kp PERIOD     &kp SLASH      &kp RIGHT_SHIFT
+				&kp LEFT_CONTROL &none        &kp LEFT_GUI &kp LEFT_ALT   &mo LAYER_LFN                                                                                   &mo LAYER_RFN     &kp RIGHT_ALT  &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW
+				                                                                             &none               &to LAYER_LFN          &act_gaming       &none
+				                                                          &kp SPACE          &kp LEFT_SHIFT      &none                  &none             &kp RIGHT_SHIFT &kp SPACE
+				                                                                                                 &kp LEFT_CONTROL       &kp RIGHT_CONTROL
 			>;
 		};
 		layer_1 { //GAMING
@@ -90,14 +98,14 @@
 		layer_2 { //LHFN
 			bindings = <
 				&sys_off
-				&kp GRAVE &kp F1 &kp F2 &kp F3        &kp F4          &kp F5        &bootloader           &none   &kp F6          &kp F7               &kp F8                &kp F9         &kp F10      &trans
-				&none     &none  &none  &none         &none           &none         &kp PG_UP             &none   &none           &kp LEFT_BRACE       &kp RIGHT_BRACE       &none          &none        &trans
-				&kp CAPS  &none  &none  &kp BACKSLASH &none           &none                                       &none           &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE &none        &trans
-				&none     &none  &none  &none         &none           &none         &kp PG_DN             &none   &none           &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &none          &kp QUESTION &trans
-				&kp HOME  &none  &none  &none         &none                                                                       &none                &none                 &none          &none        &trans
-				                                                      &none         &none                 &none   &none
-				                                      &kp LEFT_ARROW  &kp UP_ARROW  &tb_bootloader        &none   &kp DOWN_ARROW  &kp RIGHT_ARROW
-				                                                                    &kp END               &none
+				&nonee    &kp F1    &kp F2   &kp F3        &kp F4          &kp F5        &bootloader           &none   &kp F6          &kp F7               &kp F8                &kp F9         &kp F10        &trans
+				&none     &none     &none    &none         &none           &none         &kp PG_UP             &none   &none           &kp LEFT_BRACE       &kp RIGHT_BRACE       &none          &none          &trans
+				&kp CAPS  &alt_tab  &kp TAB  &kp BACKSLASH &none           &none                                       &none           &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE &kp BACKSPACE  &trans
+				&none     &none     &none    &none         &none           &none         &kp PG_DN             &none   &none           &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &none          &kp QUESTION   &trans
+				&kp HOME  &none     &none    &none         &none                                                                       &none                &none                 &none          &none          &trans
+				                                                           &none         &none                 &none   &none
+				                                           &kp LEFT_ARROW  &kp UP_ARROW  &tb_bootloader        &none   &kp DOWN_ARROW  &kp RIGHT_ARROW
+				                                                                         &kp END               &none
 			>; \
 		};		
 		layer_3 { //RHFN
@@ -121,9 +129,9 @@
 				&kp CAPS &kp HOME  &kp LEFT_ARROW         &kp DOWN_ARROW &kp RIGHT_ARROW         &kp END                 &kp PLUS     &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp MINUS &trans
 				&none    &none     &kp LS(LG(LEFT_ARROW)) &none          &kp LS(LG(RIGHT_ARROW)) &none   &none   &none   &kp ASTERISK &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp SLASH &trans
 				&none    &none     &none                  &none          &none                                                        &kp PERIOD   &kp PERIOD   &none        &none     &trans
-				                                                                              &none   &none   &none  &to LAYER_MAIN
-				                                                      &none                   &none   &none   &none  &kp RETURN   &kp NUMBER_0
-				                                                                                      &none   &none
+				                                                                                 &none   &none   &none  &to LAYER_MAIN
+				                                                         &none                   &none   &none   &none  &kp RETURN   &kp NUMBER_0
+				                                                                                         &none   &none
 			>;
 		};
 		layer_5 { //RFN
