@@ -98,14 +98,14 @@
 		layer_2 { //LHFN
 			bindings = <
 				&sys_off
-				&nonee    &kp F1    &kp F2   &kp F3        &kp F4          &kp F5        &bootloader           &none   &kp F6          &kp F7               &kp F8                &kp F9         &kp F10        &trans
+				&none     &kp F1    &kp F2   &kp F3        &kp F4          &kp F5        &bootloader           &none   &kp F6          &kp F7               &kp F8                &kp F9         &kp F10        &trans
 				&none     &none     &none    &none         &none           &none         &kp PG_UP             &none   &none           &kp LEFT_BRACE       &kp RIGHT_BRACE       &none          &none          &trans
 				&kp CAPS  &alt_tab  &kp TAB  &kp BACKSLASH &none           &none                                       &none           &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDERSCORE &kp BACKSPACE  &trans
 				&none     &none     &none    &none         &none           &none         &kp PG_DN             &none   &none           &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &none          &kp QUESTION   &trans
 				&kp HOME  &none     &none    &none         &none                                                                       &none                &none                 &none          &none          &trans
 				                                                           &none         &none                 &none   &none
 				                                           &kp LEFT_ARROW  &kp UP_ARROW  &tb_bootloader        &none   &kp DOWN_ARROW  &kp RIGHT_ARROW
-				                                                                         &kp END               &none
+				                                                                            &kp END               &none
 			>; \
 		};		
 		layer_3 { //RHFN
