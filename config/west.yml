@@ -1,16 +1,11 @@
 manifest:
   remotes:
-    - name: slicemk
-      url-base: https://github.com/slicemk
-    - name: englmaxi
-      url-base: https://github.com/englmaxi      
+    - name: xudongzheng
+      url-base: https://github.com/xudongzheng
   projects:
     - name: zmk
-      remote: slicemk
-      revision: main
+      remote: xudongzheng
+      revision: v20240802-rgb
       import: app/west.yml
-    - name: zmk-hid-trackball-interface
-      remote: englmaxi
-      revision: main
   self:
     path: config
