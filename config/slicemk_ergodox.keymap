@@ -77,7 +77,7 @@
 				&kp TAB          &kp Q        &kp W        &kp E          &kp R              &kp T               &kp HOME               &none             &kp Y           &kp U             &kp I          &kp O          &kp P          &kp BACKSLASH
 				&kp LEFT_CONTROL &kp A        &kp S        &hrm LSHIFT D  &lt LAYER_LHFN F   &kp G                                                        &kp H           &lt LAYER_RHFN J  &hrm RSHIFT K  &kp L          &kp SEMICOLON  &kp RETURN
 				&kp LEFT_SHIFT   &kp Z        &kp X        &kp C          &kp V              &kp B               &kp END                &kp DEL           &kp N           &kp M             &kp COMMA      &kp PERIOD     &kp SLASH      &kp RIGHT_SHIFT
-				&kp LEFT_CONTROL &none        &kp LEFT_GUI &kp LEFT_ALT   &mo LAYER_LFN                                                                                   &mo LAYER_RFN     &kp RIGHT_ALT  &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW
+				&kp LEFT_CONTROL &rgb_ug RGB_COLOR_HSB(128,100,100)        &kp LEFT_GUI &kp LEFT_ALT   &mo LAYER_LFN                                                                                   &mo LAYER_RFN     &kp RIGHT_ALT  &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW
 				                                                                             &none               &act_gaming            &to LAYER_LFN     &none
 				                                                          &kp SPACE          &kp LEFT_SHIFT      &none                  &none             &kp RIGHT_SHIFT &kp SPACE
 				                                                                                                 &kp LEFT_CONTROL       &kp RIGHT_CONTROL
