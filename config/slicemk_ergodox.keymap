@@ -129,7 +129,7 @@
 				&none    &none     &kp LC(LS(TAB))        &kp UP_ARROW   &kp LC(TAB)             &none   &none   &none   &none        &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none     &trans
 				&kp CAPS &kp HOME  &kp LEFT_ARROW         &kp DOWN_ARROW &kp RIGHT_ARROW         &kp END                 &kp PLUS     &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp MINUS &trans
 				&none    &none     &kp LS(LG(LEFT_ARROW)) &none          &kp LS(LG(RIGHT_ARROW)) &none   &none   &none   &kp ASTERISK &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp SLASH &trans
-				&none    &none     &none                  &none          &none                                                        &kp PERIOD   &kp PERIOD   &none        &none     &trans
+				&rgb_ug RGB_TOG    &rgb_ug RGB_BRI    &rgb_ug RGB_BRD                  &none          &none                                                        &kp PERIOD   &kp PERIOD   &none        &none     &trans
 				                                                                                 &none   &none   &to LAYER_MAIN  &none
 				                                                         &none                   &none   &none   &none  &kp RETURN   &kp NUMBER_0
 				                                                                                         &none   &none
