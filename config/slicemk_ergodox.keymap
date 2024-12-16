@@ -64,7 +64,6 @@
 			retro-tap;
 			bindings = <&kp>, <&kp>;
 		};
-	};
 		hrl: home_row_layer {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
